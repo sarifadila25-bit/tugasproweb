@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Comissions Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 30px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin-top: 5px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #5d4037;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e2723;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Comissions Form</h2>
+        <form action="#" method="POST">
+
+            <!-- Nama Lengkap (text) -->
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required><br>
+
+            <!-- Email (text) -->
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="contoh@email.com" required><br>
+
+            <!-- Password (untuk akun atau verifikasi) -->
+            <label for="password">Password (untuk konfirmasi komisi):</label>
+            <input type="password" id="password" name="password" placeholder="buat password" required><br>
+
+            <!-- Jenis Komisi (select option) -->
+            <label for="jenis_komisi">Jenis Komisi yang Diinginkan:</label>
+            <select id="jenis_komisi" name="jenis_komisi" required>
+                <option value="">-- Pilih Jenis Komisi --</option>
+                <option value="sketsa">Sketsa Hitam Putih</option>
+                <option value="sketsa">Sketsa Pulpen</option>
+                <option value="warna">Lukisan Cat Watercolor</option>
+                <option value="chibi">Lukisan Cat Akrilik</option>
+                <option value="realistik">Lukisan Cat Minyak</option>
+                <option value="custom">Custom Request</option>
+            </select><br>
+        
+
+            <!-- Preferensi Gaya (radio button) -->
+            <label>Preferensi Gaya Gambar:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gaya" value="anime" required> Anime</label>
+                <label><input type="radio" name="gaya" value="semi_realis"> Semi-Realis</label>
+                <label><input type="radio" name="gaya" value="kartun"> Kartun</label>
+                <label><input type="radio" name="gaya" value="pemandangan dan alam"> Pemandangan dan alam</label>
+                
+            </div>
+
+            <!-- Fitur Tambahan (checkbox) -->
+            <label>Fitur Tambahan (Opsional):</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="fitur[]" value="background"> Background Detail</label>
+                <label><input type="checkbox" name="fitur[]" value="ekspresi"> Ekspresi Khusus</label>
+                <label><input type="checkbox" name="fitur[]" value="pose"> Pose Spesifik</label>
+            </div>
+
+            <!-- Deskripsi Permintaan (textarea) -->
+            <label for="deskripsi">Deskripsi Detail Permintaan Anda:</label>
+            <textarea id="deskripsi" name="deskripsi" rows="5" placeholder="Jelaskan karakter, pose, warna, latar, atau detail lainnya..." required></textarea>
+
+            <!-- Tombol Submit -->
+            <input type="submit" value="Kirim Permintaan Komisi">
+
+        </form>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>
